@@ -127,7 +127,9 @@ typedef NS_ENUM(NSInteger, SXMarqueeTapMode) {
 {
     _messageArray = messageArray;
     if (self.messageArray.count == 1) {
-        self.messageArray = @[self.messageArray[0],self.messageArray[0]];
+        self.label1.text = self.messageArray.firstObject;
+        self.label2.text = nil;
+        self.messageIndex = 0;
     }
     
     if (self.messageArray.count > 2) {
