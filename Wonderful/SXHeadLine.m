@@ -110,6 +110,7 @@ typedef NS_ENUM(NSInteger, SXMarqueeTapMode) {
 
 #pragma mark - **************** opration
 - (void)start{
+    [self stop];
     if (self.messageArray.count < 2) {
         return;
     }
