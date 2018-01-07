@@ -126,6 +126,9 @@ typedef NS_ENUM(NSInteger, SXMarqueeTapMode) {
 #pragma mark - **************** set
 -(void)setMessageArray:(NSArray *)messageArray
 {
+    [self stop];
+    [self removeCompoment];
+    [self addCompoment];
     _messageArray = messageArray;
     if (self.messageArray.count == 1) {
         self.label1.text = self.messageArray.firstObject;
